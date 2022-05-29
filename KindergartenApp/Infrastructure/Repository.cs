@@ -18,7 +18,7 @@ public class Repository : IRepository
         await _context.Entities<TEntity>(nameCollection).InsertOneAsync(entity);
     }
 
-    public async Task<TEntity> Get<TEntity>(string id, string nameCollection)
+    public async Task<TEntity> Get<TEntity>(Guid id, string nameCollection)
     {
         var filter = Builders<TEntity>.Filter.Eq("Id", id);
         return await _context.Entities<TEntity>(nameCollection)
@@ -26,13 +26,13 @@ public class Repository : IRepository
             .FirstOrDefaultAsync();
     }
 
-    public async Task Update<TEntity>(string id, TEntity entity, string nameCollection)
+    public async Task Update<TEntity>(Guid id, TEntity entity, string nameCollection)
     {
         await Remove<TEntity>(id, nameCollection);
         await Add(entity, nameCollection);
     }
 
-    public async Task<DeleteResult> Remove<TEntity>(string id, string nameCollection)
+    public async Task<DeleteResult> Remove<TEntity>(Guid id, string nameCollection)
     {
         return await _context.Entities<TEntity>(nameCollection).DeleteOneAsync(
             Builders<TEntity>.Filter.Eq("Id", id));

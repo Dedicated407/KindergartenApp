@@ -1,15 +1,13 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 
-namespace KindergartenApp.Models;
+namespace KindergartenApp.Entities;
 
 public class JunctionTable
 {
     [BsonId]
-    public string Id { get; set; }
+    public Guid Id { get; set; }
     
-    [BsonId]
-    public string ChildId { get; set; }
+    public Guid ChildId { get; set; }
     
-    [BsonId]
-    public string VaccinationId { get; set; }
+    public Guid VaccinationId { get; set; }
 }

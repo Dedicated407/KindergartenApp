@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace KindergartenApp.Models;
+namespace KindergartenApp.Entities;
 
 public class Employee : BaseEntity
 {
