@@ -1,0 +1,32 @@
+@model IEnumerable<KindergartenApp.Entities.Child>
+
+@{
+    ViewBag.Title = "Дети";
+}
+
+<h3 class="my-4 text-center">@ViewBag.Title</h3>
+<div class="mx-4">
+    <table class="table table-bordered table-striped table-hover table-sm">
+        <thead class="table-dark">
+        <tr class="table-responsive">
+            <th>ID</th>
+            <th>ФИО</th>
+            <th>Группа</th>
+            <th>Номер свидетельства о рождении</th>
+            <th>Время создания</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var child in Model)
+        {
+            <tr class="table-responsive text-start">
+                <td>@child.Id</td>
+                <td>@child.FullName</td>
+                <td>@child.GroupId</td>
+                <td>@child.CertificateNumber</td>
+                <td>@child.Created</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

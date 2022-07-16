@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Детский сад "Гвоздика"</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"/>
+</head>
+
+<body>
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" asp-action="MainPage">Детский сад "Гвоздика"</a>
+        </div>
+    </nav>
+</header>
+
+<main class="py-md-5">
+    @RenderBody()
+</main>
+
+<footer class="container-fluid nav navbar-dark py-4 justify-content-between bg-dark fixed-bottom">
+    <nav class="row-cols-2 nav d-flex p-4">
+        <a class="p-2 link-secondary" asp-action="MainPage" asp-controller="Main">На главную</a>
+        <a class="p-2 link-secondary" asp-action="ChildPage" asp-controller="Main">Дети</a>
+        <a class="p-2 link-secondary" asp-action="EmployeePage" asp-controller="Main">Работники</a>
+        <a class="p-2 link-secondary" asp-action="ParentPage" asp-controller="Main">Родители</a>
+        <a class="p-2 link-secondary" asp-action="GroupPage">Группы</a>
+        <a class="p-2 link-secondary" asp-action="VaccinationPage">Прививки</a>
+    </nav>
+
+    <nav class="row-cols-2 p-4">
+        <p class="navbar-brand p-2">© 2022 Детский сад "Гвоздика"</p>
+    </nav>
+</footer>
+</body>
+</html>

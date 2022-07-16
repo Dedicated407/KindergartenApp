@@ -1,0 +1,30 @@
+@model IEnumerable<KindergartenApp.Entities.Vaccination>
+
+@{
+    ViewBag.Title = "Прививки";
+}
+
+<h3 class="my-4 text-center">@ViewBag.Title</h3>
+<div class="mx-4">
+    <table class="table table-bordered table-striped table-hover table-sm">
+        <thead class="table-dark">
+        <tr class="table-responsive">
+            <th>ID</th>
+            <th>Название</th>
+            <th>Описание</th>
+            <th>Время создания</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var vaccination in Model)
+        {
+            <tr class="table-responsive text-start">
+                <td>@vaccination.Id</td>
+                <td>@vaccination.Name</td>
+                <td>@vaccination.Description</td>
+                <td>@vaccination.Created</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

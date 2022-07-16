@@ -30,7 +30,8 @@ public class Startup
     {
         app.UseSwagger();
         app.UseSwaggerUI();
-        
+
+        app.UseStaticFiles();
         app.UseStatusCodePages();
         app.UseRouting();
 
