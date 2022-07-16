@@ -1,0 +1,32 @@
+@model IEnumerable<KindergartenApp.Entities.Group>
+
+@{
+    ViewBag.Title = "Группы";
+}
+
+<h3 class="my-4 text-center">@ViewBag.Title</h3>
+<div class="mx-4">
+    <table class="table table-bordered table-striped table-hover table-sm">
+        <thead class="table-dark">
+        <tr class="table-responsive">
+            <th>ID</th>
+            <th>Название</th>
+            <th>ID воспитателя</th>
+            <th>ID нянечки</th>
+            <th>Время создания</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var group in Model)
+        {
+            <tr class="table-responsive text-start">
+                <td>@group.Id</td>
+                <td>@group.Name</td>
+                <td>@group.KindergartenTeacherId</td>
+                <td>@group.BabysitterId</td>
+                <td>@group.Created</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

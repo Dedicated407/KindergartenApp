@@ -1,0 +1,26 @@
+@model KindergartenApp.Infrastructure.IRepository
+
+@{
+    ViewBag.Title = "Главная страница";
+}
+
+<section class="pt-5">
+
+    <div class="container">
+        <div class="row">
+            <img class="col" src="~/images/Kindergarten.jpg" style="height: 500px; width: auto;" alt="logo">
+            <div class="col align-self-center">
+                <div class="container">
+                    <div class="row-cols-1 mb-4">
+                        <a class="my-3 btn btn-outline-dark" asp-action="ChildPage">Дети</a>
+                        <a class="btn btn-dark" asp-action="EmployeePage">Работники</a>
+                        <a class="my-3 btn btn-outline-dark" asp-action="ParentPage">Родители</a>
+                        <a class="btn btn-dark" asp-action="GroupPage">Группы</a>
+                        <a class="my-3 btn btn-outline-dark" asp-action="VaccinationPage">Прививки</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
